@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/visual-effects.css" />
+    <title>Efectos Visaules en CSS</title>
+  </head>
+  <body>
+    <h1>Efectos visuales CSS</h1>
+    <hr />
+    <h2>Sombras</h2>
+    <div class="box shadows">Sombras</div>
+    <div class="box shadows-multiples">Sombras</div>
+    <div class="box drop-shadow">
+      <img src="assets/arbol.png" alt="" />
+    </div>
+    <hr />
+    <h2>Degradados</h2>
+    <h3>Lineal</h3>
+    <div class="box linear-gradient"></div>
+    <h3>Radial</h3>
+    <div class="box radial-gradient"></div>
+    <h3>Conico</h3>
+    <div class="box conic-gradient"></div>
+
+    <h3>Repetir degradados</h3>
+    <div class="box repeat-gradient-lineal"></div>
+    <div class="box repeat-gradient-radial"></div>
+    <div class="box repeat-gradient-conic"></div>
+
+    <h3>Graficas con Degradados</h3>
+    <div class="box chart-gradient"></div>
+    <div class="box donut-gradient"></div>
+    <h2>Filtros</h2>
+
+    <h3>Filtros</h3>
+
+    <article class="card">
+      <img class="filter" src="assets/puesta-sol.jpg" alt="Puesta de sol">
+    </article>
+
+    <h3>Filtros multiples</h3>
+    
+    <article class="card">
+      <img class="filters-multiple" src="assets/puesta-sol.jpg" alt="puesta sol">
+      
+    </article>
+
+    <h3>Filtros a fondos</h3>
+    
+    <article class="card relative">
+      <img  src="assets/puesta-sol.jpg" alt="puesta sol">
+      <div class="backdrop-filter">
+        <h4>Puesta de Sol</h4>
+      </div>
+    </article>
+
+    <h3>Filtros Multiples a Fondos</h3>
+    <article class="card relative">
+      <img  src="assets/puesta-sol.jpg" alt="puesta sol">
+      <div class="backdrop-filter-multiple">
+        <h4>Puesta de Sol</h4>
+      </div>
+    </article>
+
+    <h3>Modo Dark/Light con Filtros</h3>
+
+    <article class="card">
+      <img src="assets/puesta-sol.jpg" alt="puesta sol">
+    </article>
+
+    <article class="card">
+      <img src="assets/favicon.png" alt="kenai">  
+    </article>
+    <hr>
+
+    <h2>Modos de mezcla</h2>
+    <h3>Sobre imagenes y elementos HTML</h3>
+    <article class="card relative blend-modes">
+      <img class="absolute" src="assets/BuenosDias.jpg" alt="beunos dias">  
+      <img src="assets/favicon.png" alt="kenai">
+    </article>
+    <h3>Modos de mezcla sobre imagenes de fondos (background image)</h3>
+    <article class="card bg-blend-mode"></article>
+    <hr>
+    <h2>Mascaras</h2>
+    <article class="card clip-path">
+      <img src="assets/puesta-sol.jpg" alt="puesta sol">
+    </article>
+    <hr>
+    <h2>Formas</h2>
+    <article class="shapes">
+      <h3>Ejemplos de Formas y siluetas entre textos e imagenes</h3>
+      <img src="assets/puesta-sol.jpg" alt="puesta de sol" class="float-left shape-1">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, quae inventore! Neque repellat provident accusamus! Aspernatur, fugiat? Veritatis similique nihil excepturi voluptatibus, ipsa fugit nam, voluptas illo ducimus sit placeat!</p>
+      <p>Veritatis praesentium aliquid assumenda delectus doloribus rerum, quas, corrupti dolorum ducimus hic quae voluptates ex ipsam natus similique maiores, ea harum perspiciatis facilis amet vero itaque. Impedit temporibus dignissimos voluptatum!</p>
+      <p>Culpa labore vel, odio cum nam, aut enim repellat, omnis maiores sapiente consectetur id? Tempore laudantium quas atque? Nobis perferendis nisi dolore blanditiis error quis quas omnis sapiente vitae minus.</p>
+      <p>Quae necessitatibus modi eius doloribus quas. Debitis perferendis animi vero error distinctio praesentium repudiandae repellendus eos id hic nostrum provident ipsa, nulla nobis ipsam deserunt sapiente dignissimos? Harum, aperiam unde!</p>
+      <img src="assets/puesta-sol.jpg" alt="puesta de sol" class="float-right shape-2">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, quae inventore! Neque repellat provident accusamus! Aspernatur, fugiat? Veritatis similique nihil excepturi voluptatibus, ipsa fugit nam, voluptas illo ducimus sit placeat!</p>
+      <p>Veritatis praesentium aliquid assumenda delectus doloribus rerum, quas, corrupti dolorum ducimus hic quae voluptates ex ipsam natus similique maiores, ea harum perspiciatis facilis amet vero itaque. Impedit temporibus dignissimos voluptatum!</p>
+      <p>Culpa labore vel, odio cum nam, aut enim repellat, omnis maiores sapiente consectetur id? Tempore laudantium quas atque? Nobis perferendis nisi dolore blanditiis error quis quas omnis sapiente vitae minus.</p>
+      <p>Quae necessitatibus modi eius doloribus quas. Debitis perferendis animi vero error distinctio praesentium repudiandae repellendus eos id hic nostrum provident ipsa, nulla nobis ipsam deserunt sapiente dignissimos? Harum, aperiam unde!</p>
+      <img src="assets/puesta-sol.jpg" alt="puesta de sol" class="float-left shape-3">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam labore quod molestias at ipsa voluptate praesentium atque libero sapiente eum sint ipsam nihil, magnam similique dolorum nesciunt enim inventore itaque?</p>
+      <p>Aliquam, aliquid consequuntur quo ullam modi quia porro reiciendis possimus magni exercitationem sunt delectus velit suscipit nesciunt, optio nostrum? Quod quae ab fugiat, dolores nam repudiandae tempore magnam atque maxime.</p>
+      <p>Dicta aspernatur ratione sequi ipsum, dignissimos ducimus delectus, quod eum laborum, nobis iusto adipisci quibusdam sunt? Iusto modi totam beatae exercitationem, obcaecati, voluptates vero esse eum deleniti reiciendis, dolores perferendis!</p>
+      <p>Ex architecto voluptate quis quas iure consequatur alias cum consectetur error, libero necessitatibus! Quibusdam natus voluptate impedit totam, blanditiis quisquam sit dolorem ipsum aut repellat dolor eius, cupiditate repellendus nesciunt.</p>
+    </article>
+
+    
+
+    <a href="index.html#temario">Ir hacia el temario☝️</a>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before{
+    box-sizing: inherit;
+}
+
+
+.box{
+    background-color: rgba(48, 103, 112, 0.815);
+    background-color: rgba(48, 103, 112, 0.815);
+    border: thick solid rgb(209, 207, 207);
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    width: 300px;
+    height: 300px;  
+}
+
+
+.border-radius {
+    
+    border-radius: 4rem 3rem 2rem 1rem;
+    border-radius: 1.5rem;
+    border-top-right-radius: 4rem;
+    border-bottom-right-radius: 9rem;
+}
+
+.border-radius  div {
+    box-sizing: content-box;
+    background-color: rgb(209, 207, 207);
+    border: thick solid white;
+    margin: 0 auto;
+    margin-top: 4rem;
+    width: 15vw;
+    height: 15vh;
+    border-radius: 0.75rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 4.5rem;
+}
+
+
+.border-radius-2 {
+    border-radius: 2rem;
+}
+
+.border-radius-3{
+    border-radius: 25rem / 50rem;
+}
+
+.border-radius-4{
+    width: 40vw;
+    height: 20vh;
+    border-radius: 50%;
+}
+
+
+.outline {
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    outline-width: 5px;
+    outline-style: solid;
+    outline-color: red;
+    outline: 7px solid blue;
+    /* border-width: 100px; */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    outline-offset: -4rem;
+}

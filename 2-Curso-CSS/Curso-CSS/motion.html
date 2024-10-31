@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/motion.css">
+    <title>Movimiento en CSS</title>
+</head>
+
+<body>
+    <h1>Movimiento en CSS</h1>
+    <hr>
+    <section class="transitions">
+        <h2>Transiciones</h2>
+        <div class="box"></div>
+        <article class="card">
+            <img src="assets/puesta-sol.jpg" alt="">
+        </article>
+
+    </section>
+
+
+    <hr>
+
+    <section class="transforms">
+
+        <h2>Transformaciones</h2>
+
+        <h3>Transformaciones en 2D</h3>
+        <article class="card transform-2d">
+            <img src="assets/puesta-sol.jpg" alt="">
+        </article>
+
+
+
+        <h3>Transformaciones en 3D</h3>
+        <article class="card transform-3d">
+            <img src="assets/puesta-sol.jpg" alt="">
+        </article>
+
+        <h3>origen de las transformaciones</h3>
+        <article class="card transform-origin">
+            <img src="assets/puesta-sol.jpg" alt="">
+        </article>
+
+        <h3>Flip Cards</h3>
+        <article class="flip-card-1">
+            <div class="flip-face flip-front">
+                <img src="assets/puesta-sol.jpg" alt="Puesta sol">
+            </div>
+            <div class="flip-face flip-back">
+                <img src="assets/BuenosDias.jpg" alt="Buenos Dias">
+            </div>
+        </article>
+
+        <article class="flip-card-2">
+            <div class="flip-face flip-front">
+                <img src="assets/puesta-sol.jpg" alt="Puesta sol">
+            </div>
+            <div class="flip-face flip-back">
+                <img src="assets/BuenosDias.jpg" alt="Buenos Dias">
+            </div>
+        </article>
+
+
+    </section>
+
+
+    <hr>
+
+    <section class="animations">
+        <h2>Animaciones</h2>
+        <article class="card my-animation">
+            <img src="assets/puesta-sol.jpg" alt="Puesta sol">
+        </article>
+
+        <article class="card my-animation-2">
+            <img src="assets/puesta-sol.jpg" alt="Puesta sol">
+        </article>
+
+        <article class="card animation-multiple">
+            <img src="assets/puesta-sol.jpg" alt="Puesta sol">
+        </article>
+    </section>
+
+    <hr>
+
+    <section class="motion-examples">
+        <h2>Ejemplos de efectos de movimiento en CSS</h2>
+        <h3>FadeIn / FadeOut</h3>
+        <div class="fade-in">🧔🏻‍♂️</div>
+        <div class="fade-out">🧔🏻‍♂️</div>
+
+        <h3>Sacudir</h3>
+        <div class="shake">☕</div>
+
+        <h3>Pulsaciones</h3>
+        <div class="pulse">❤️</div>
+        <div class="pulse">SOFIATTT</div>
+
+        <div class="pulse">Eres el CSS de mi HTML</div>
+        <div class="heart"></div>
+
+        <h4>Spinner/Loader</h4>
+        <div class="spinner"></div>
+
+        <h3>Botones Animados</h3>
+        <button class="btn anim-bottom to-left">Animacion Izquierda</button>
+        <button class="btn anim-bottom to-center">Animacion Centro</button>
+        <button class="btn anim-bottom to-right">Animacion Derecha</button>
+        <button class="btn anim-bg-gradient">Fondo con Gradiente</button>
+
+        <h3>Menu de Pestañas(Tabs)</h3>
+        <nav class="tabs-menu">
+            <input type="radio" id="tab-1" name="tabs">
+            <label for="tab-1">Seccion 1</label>
+            <input type="radio" id="tab-2" name="tabs">
+            <label for="tab-2">Seccion 2</label>
+            <input type="radio" id="tab-3" name="tabs">
+            <label for="tab-3">Seccion 3</label>
+            <input type="radio" id="tab-4" name="tabs">
+            <label for="tab-4">Seccion 4</label>
+            <div class="tab-bg-hover"></div>
+        </nav>
+    </section>
+
+    <h3>Menu Off Canvas</h3>
+    <input type="checkbox" class="off-canvas-btn">
+    <label class="off-canvas-burger"></label>
+    <label class="off-canvas-cross"></label>
+    <nav class="off-canvas-menu">
+        <div class="off-canvas-menu-container">
+            <a href="#" class="off-canvas-link">Seccion 1</a>
+            <a href="#" class="off-canvas-link">Seccion 2</a>
+            <a href="#" class="off-canvas-link">Seccion 3</a>
+            <a href="#" class="off-canvas-link">Seccion 4</a>
+            <a href="#" class="off-canvas-link">Seccion 5</a>
+        </div>
+    </nav>
+
+    <h3>Ventana Modal</h3>
+    <a href="motion.html#modal-1">Abrir Modal</a>
+    <article id="modal-1" class="modal">
+        <div class="modal-container">
+            <a href="#cerrar" class="modal-close">X</a>
+            <h2>Esto es una ventana Modal</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus est, eius placeat suscipit at
+                laborum a tempore? Corporis nisi voluptatibus veritatis voluptates expedita sapiente deleniti sint?
+                Sint, ut mollitia. Consequatur.</p>
+            <ul>
+                <li><a href="">enlace</a></li>
+                <li><a href="">enlace</a></li>
+                <li><a href="">enlace</a></li>
+                <li><a href="">enlace</a></li>
+                <li><a href="">enlace</a></li>
+                <li><a href="">enlace</a></li>
+            </ul>
+        </div>
+    </article>
+
+    <article class="star-wars">
+        <div class="star-wars-container">
+            <h3>Stars wars Intro</h3>
+            <h2>Episodio III</h2>
+            <h3>The Revenge Of SITH</h3>
+            <p>
+                War! The Republic is crumbling
+                under attacks by the ruthless
+                Sith Lord, Count Dooku.
+                There are heroes on both sides.
+                Evil is everywhere.
+            </p>
+            <p>
+                In a stunning move, the
+                fiendish droid leader, General
+                Grievous, has swept into the
+                Republic capital and kidnapped
+                Chancellor Palpatine, leader of
+                the Galactic Senate.
+            </p>
+            <p>
+                As the Separatist Droid Army
+                attempts to flee the besieged
+                capital with their valuable
+                hostage, two Jedi Knights lead a
+                desperate mission to rescue the
+                captive Chancellor....
+            </p>
+        </div>
+    </article>
+
+
+
+
+
+
+    <a href="index.html#temario">Ir hacia el temario☝️</a>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+
+.colors{
+    width: 200px;
+    height: 70px;
+    margin: 0px auto;
+}
+
+a[href="https://htmlcolorcodes.com/es/"]{
+    display: inline-block;
+    text-align: center;
+    padding-top: 15px;
+    width: 200px;
+    height: 35px;
+    background-color: burlywood;
+}
+
+.color-by-name{
+    background-color: coral;
+    color: rebeccapurple;
+    border: thick solid greenyellow;
+}
+
+.color-hex{
+    background-color: #f60;
+    background-color: #f60;
+    background-color: #ff6605;
+    background-color: #000000b0;
+    color: #12ac78;
+    border: thick solid #00ff00;
+}
+
+
+.color-rgb{
+    background-color: rgb(255, 255, 255);
+    background-color: rgb(255,0,0);
+    background-color: rgb(0, 255, 0);
+    background-color: rgb(0, 0, 255);
+    background-color: rgb(255,125,90,.55);
+    color: rgb(37, 122, 20);
+    border: thick solid rgb(128,109,7);
+}
+
+.color-hsl{
+    background-color: hsl(0, 100%, 50%);
+    background-color: hsl(30, 100%, 50%);
+    color: hsl(210, 75%, 65%);
+    border: thick solid hsla(120, 50%,50%,.5);
+}
+
+.color-hsl .imagen{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.imagen img{
+    width: 500px;
+}
+
+.color-transparent-current{
+    color: rgb(0, 25, 139);
+    background-color: darkmagenta;
+    background-color: transparent;
+    border: thick solid currentColor;
+    /* background-color: currentColor;   
+    color: white; */
+
+}
+
+
+.opacity{
+    background-color: orchid;
+    color: navy;
+    border: thick solid black;
+    opacity: 0.9;
+}
+
+

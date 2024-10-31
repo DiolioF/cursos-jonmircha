@@ -1,0 +1,52 @@
+/* 
+
+
+
+Grids
+12/1 = 12
+12/2 = 6
+12/3 = 4
+12/4 = 3
+12/6 = 2
+12/12=1
+
+
+
+
+
+12     -> 100%
+n°cols -> ???%
+
+
+
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-item {
+    flex: 0 0 50%;
+}
+
+.row>.flex-item:nth-child(4) {
+    flex-basis: 100%;
+}
+
+@media screen and (max-width:37.5rem) {
+    .flex-item {
+        flex-basis: 33.3333333333%;
+
+    }
+}

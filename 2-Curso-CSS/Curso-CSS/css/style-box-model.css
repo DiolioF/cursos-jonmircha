@@ -1,0 +1,166 @@
+h1{
+    width: 400px;
+    height: 200px;
+    border-color: green;
+    border-width: 3px 0px 1px 1px;
+    border-style: solid dashed solid dashed;
+}
+
+body{
+    margin: 0px;
+}
+
+.caja-uno,
+.caja-dos{
+    background-color: chocolate;
+    border: medium solid orange;
+    padding: 20px 40px;
+    margin: 40px 20px;
+}
+
+.caja-linea,
+.caja-bloque{
+    background-color: darkcyan;
+    width: 500px;
+    height: 250px;
+    border: medium solid black;
+    padding: 16px;
+}
+
+.caja-bloque{
+    margin: 32px;
+    display: block;
+}
+
+.caja-linea{
+    margin: 100px;
+    display: inline;
+}
+
+.caja-none,
+.caja-lineabloque,
+.caja-hidden{
+    background-color: darkolivegreen;
+    color: white;
+    width: 600px;
+    height: 300px;
+    border: medium solid black;
+}
+.caja-lineabloque{
+    display: inline-block;
+}
+
+.caja-none{
+    display: none;
+}
+
+.caja-hidden{
+    visibility: hidden;
+}
+
+.overflow{
+    background-color: darkturquoise;
+    width: 200px;
+    height: 100px;
+    overflow: visible;
+    overflow: hidden;
+    overflow: scroll;
+    overflow: auto;
+}
+
+.box-sizing-content,
+.box-sizing-border{
+    background-color: deepskyblue;
+    width: 500px;
+    height: 250px;
+    padding: 10px;
+    box-sizing: content-box;
+    border: thick solid black;
+    margin: 5px 0;
+}
+
+.box-sizing-border{
+    box-sizing:border-box;
+}
+
+.container-col-3{
+    background-color: burlywood;
+    width: 600px;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.container-col-3 > *{
+    box-sizing: border-box;
+    width: 200px;
+    border: thin solid red;
+    padding: 10px;
+    float: left;
+}
+
+/*Codigo de Reseteo para que todo lo que hagamos sea border-box*/
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{box-sizing: inherit;}
+
+/* Floats */
+
+.container-floats section:nth-child(2){
+    background-color: cornflowerblue;
+}
+
+.container-floats section:first-child{
+    background-color: burlywood;
+}
+
+.container-floats section:last-child{
+    background-color: yellow;
+}
+
+.float-right{
+    float: right;
+}
+
+.float-left{
+    float: left;
+}
+
+
+.clearfix{
+    clear:both;
+}
+
+/* Colapso de margenes verticales */
+
+.margin-colapse{
+    background-color: skyblue;
+}
+
+.margin-colapse section{
+    border: thin solid black;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.margin-colapse span{
+    border: thin solid black;
+    display: inline-block;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+/* Centrado de cajas */
+
+.sitio{
+    border: thin solid black;
+    background-color: burlywood;
+    width: 800px;
+    height: 1000px;
+    padding: 16px;
+    margin: 0px auto;
+}

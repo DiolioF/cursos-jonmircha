@@ -1,0 +1,126 @@
+/* Normalizacion de Cajas a Border-Box */
+
+html{
+    background-color: black;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: antiquewhite;
+    margin: 0;
+    /* margin: 5%; */
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+/* Pixeles */
+
+.pixels{
+    background-color: cadetblue;
+    width: 500px;
+    height: 400px;
+    padding: 20px;
+    font-size: 16px;
+    font-size: 32px;
+    border: thick solid rebeccapurple;
+}
+
+/* em´s  */
+
+.ems{
+    background-color: cadetblue;
+    font-size: 24px;
+    padding: 1em .5em;
+    border: thick solid rebeccapurple;
+}
+
+.ems-child{
+    background-color: hsla(60,100%,50%,0.7);
+    border: thick solid beige;
+    margin : 0.5em;
+    padding: .5em;
+    font-size: 2em;
+}
+
+.rems{
+    background-color: cadetblue;
+    font-size: 24px;
+    padding: 1rem .5rem;
+    border: thick solid rebeccapurple;
+}
+
+.rems-child{
+    background-color: hsla(60,100%,50%,0.7);
+    border: thick solid beige;
+    margin : 0.5rem;
+    padding: .5rem;
+    font-size: 2rem;
+}
+
+.exs{
+    background-color: cadetblue;
+    font-size: 24px;
+    padding: 1ex .5ex;
+    border: thick solid rebeccapurple;
+}
+
+.exs-child{
+    background-color: hsla(60,100%,50%,0.7);
+    border: thick solid beige;
+    margin : 0.5ex;
+    padding: .5ex;
+    font-size: 2ex;
+}
+
+.chs{
+    background-color: cadetblue;
+    width: 10ch;
+    /* border: thick solid rebeccapurple; */
+}
+
+.percentages{
+    background-color: darkkhaki;
+    width: 80%;
+    height: 100%;
+    padding: 5%;
+    font-size: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.height-parent{
+    background-color: rgba(173, 87, 12, 0.842);
+    height: 500px;
+    width: 50rem;
+}
+
+.height-child{
+    background-color: coral;
+    width: 50%;
+    height: 40%;
+}
+
+.viewport{
+    display: block;
+    background-color: darkcyan;
+    width: 100%;
+    width: 100vh;
+    height: 50vh;
+    width: 100vw;
+    font-size: 2vw;
+    padding: 2vh 2vw;
+
+}
+
+.vmax,
+.vmin{
+    background-color: darksalmon;
+    width: 50vmax;
+    height: 50vmin;
+    border: thick solid rgb(102, 206, 238);
+}
+
+
