@@ -93,6 +93,8 @@ let modulo = 5 / 2
 console.log(a)
 console.log(modulo)
 
+console.log("***************\n salto de linea \n***************")
+
 // Realacionales
 
 console.log(8>9)
@@ -108,31 +110,61 @@ console.log(7 <= 7)
  tres === es comparacion de tipo de dato y valor
 */ 
 
-console.log(7 == 7)
-console.log("7" == 7)
-console.log(0 == false)
+// console.log(7 == 7)
+// console.log("7" == 7)
+// console.log(0 == false)
 
-console.log(7 === 7)
-console.log("7" === 7)
-console.log(0 === false)
+// console.log(7 === 7)
+// console.log("7" === 7)
+// console.log(0 === false)
 
-console.log("***************\n salto de linea \n***************")
+// console.log("***************\n salto de linea \n***************")
 
-console.log(7 != 7)
-console.log("7" != 7)
-console.log(0 != false)
+// console.log(7 != 7)
+// console.log("7" != 7)
+// console.log(0 != false)
 
-console.log(7 !== 7)
-console.log("7" !== 7)
-console.log(0 !== false)
+// console.log(7 !== 7)
+// console.log("7" !== 7)
+// console.log(0 !== false)
+
+// console.log("***************\n salto de linea \n***************")
 
 // Incremento Decremento
 
-let i = 1
+// let i = 1
 
-i = i + 2
+// i = i + 2
 
-i++
-i++
+// i++
+// i++
+// i--
+// i++
+// i++
+// i--
+// i++
 
-console.log(i)
+// console.log(i)
+
+// console.log("***************\n salto de linea \n***************")
+
+/* logicos
+
+!  - Not : Niega, es decir lo que es verdadero lo vuelve falso y vuceversa
+|| - Or  : Cuando tenga 2 o mas condiciones, con que una se cumpla, es decir que sea verdadera,
+El OR validara
+&& - And: Cuando tenga 2 0 mas condiciones, todas tienen que cumplirse es decir ser verdaderas,
+para que AND se valide
+
+*/
+
+// console.log("not")
+// console.log(!true)
+// console.log(!false)
+// console.log("or")
+// console.log((9 === 9)||("9" === 9)) 
+// console.log((9 === "9")||("9" === 9)) 
+// console.log("and")
+// console.log((9 === 9)&&(8 == "8")) 
+// console.log(!(9 === "9") && !("9" === 9)) 
+
