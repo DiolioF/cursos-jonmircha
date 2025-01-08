@@ -205,7 +205,7 @@ funcionDeclarada()
 
 //Expresada
 
-// funcionExpresada() da error porque no tienen hoisting las funciones 
+// funcionExpresada() da error porque no tienen hoisting las funciones expresadas
 
 const funcionExpresada = function(nombre){
     console.log("Esto es una funcion expresada, es decir una funcion que se le a asignado como valor a una variable, si invocamos a esta funcion antes de su definicion JS nos dira ...")

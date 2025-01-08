@@ -10,7 +10,7 @@ console.log(b.length)
 b[4][1] = "patas"
 console.log(b[4][1])
 
-const array2 = Array.of("hola","my name is", "michael", 16, ["basball","temmis","trading"])
+const array2 = Array.of("hola","my name is", "michael", 16, ["basball","tennis","trading"])
 
 console.log(array2)
 
@@ -386,8 +386,8 @@ let persona = {
 
 //destructuracion
 
-let {nombre,apellido,edad} = persona
-console.log(nombre,apellido,edad)
+let {nombre,apellido,edad:age} = persona
+console.log(nombre,apellido,age)
 
 */
 
