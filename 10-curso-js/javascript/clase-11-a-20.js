@@ -10,7 +10,7 @@ console.log(b.length)
 b[4][1] = "patas"
 console.log(b[4][1])
 
-const array2 = Array.of("hola","my name is", "michael", 16, ["basball","tennis","trading"])
+const array2 = Array.of("hola","my name is", "michael", 16, ["baseball","tennis","trading"])
 
 console.log(array2)
 
@@ -37,7 +37,7 @@ console.clear()
 
 //clase 12 - Objetos
 
-/*
+/
 
 let a = new String("Hola")
 
@@ -420,7 +420,7 @@ dog.ladrar()
 */
 
 //Clase 20 - Parametros REST & Operador Spread
-
+/*
 function sumar (a,b, ...c){
     let resultado = a + b
     c.forEach(function(i){
@@ -438,3 +438,4 @@ const arr1 = [1,2,3,4,5],
 console.log(arr1,arr2)
 const arr3 = [...arr1, ...arr2]
 console.log(arr3)
+*/
