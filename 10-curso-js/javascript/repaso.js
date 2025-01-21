@@ -11,7 +11,7 @@ console.log(mensajeInicio)
 
 //Tipo de escrituras de codigo - nombres:
 // UPPER_CASE = Constantes
-// LOWER_CASE = nombres_de_archivos
+// lower_case = nombres_de_archivos
 // lowerCamelCase = Objetos , primitivos, funciones o instancias
 // UpperCamelCase = Clases
 

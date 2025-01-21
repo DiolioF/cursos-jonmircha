@@ -37,7 +37,7 @@ console.clear()
 
 //clase 12 - Objetos
 
-/
+/*
 
 let a = new String("Hola")
 
