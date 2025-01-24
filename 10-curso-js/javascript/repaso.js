@@ -359,7 +359,7 @@ console.log(objectoLiteralSofi.sofi)
 
 console.clear()
 
-//Parametro REST & SPREAD operator
+//Parametro REST & SPREAD operator - clase 20
 
 //el parametro rest es una forma de asignarle parametros virtualmente infinitos a una funcion, utilizaondo la sintaxis ...nombreRest. El rest actua como un array que contendra el resto de parametro pasados.
 
@@ -387,3 +387,81 @@ console.log(arreglo5)
 //Si los descomponemos con el spread operator queda mejor
 const arreglo6 = [...arreglo3,...arreglo4]
 console.log(arreglo6)
+
+//Arrow function(funciones flecha) - Clase 21
+//Es una nueva forma de declarar funciones anonimas expresadas
+//se hace de la siguiente manera:
+/*
+const nombreArrowFunction = (params) => {
+    instrucciones de codigo
+    }
+*/ 
+//Si lleva un solo parametro se pueden omitir los () y si tiene una sola linea de codigo se pueden omitor las {}
+//No es rtecomdable usarlas en objetos porque al llamar a this hara referencia al ambito de existencia del objeto y no al objeto en si mismo
+//Es muy util para los forEach de los arrays
+//si tiene una sola linea de codigo el return es implicito
+
+console.clear()
+
+let sofiamorcito = ["sofi","te","amo","con","toda","mi","alma","y","quiero","que","nos","vaya","bien"]
+
+sofiamorcito.forEach(el=>console.log(el))
+
+let sofiteamot = (cuantoamor,besoscachetes) => {
+    let tequierobesar = `te quiero dar el ${cuantoamor}% de mi amor y quiero darte ${besoscachetes} besos en los cachetes ;)`
+    return tequierobesar
+}
+
+console.log(sofiteamot("100","un millon"))
+
+//Prototipos/POO - clase 22
+
+//En poo tenemos las clases y los objetos, las clases son un molde y los objetos son cosas que salen del molde, la accion de crear objetos a partir de un clase se llama INSTANCIAR. Los objetos tienen metodos y atributos
+//Tener en cuenta las principales caracteristicas del POO:
+//ABSTRACCION
+//ENCAPSULAMIENTO
+//HERENCIA
+//POLIMORFISMO
+
+//PROTOTIPOS: Seria la POO primitiva de javascript, se usa UpperCamelCase para escribirla
+//los prototipos son funciones contructoras de objetos, los metodos se asignas aparte para ahorrar memoria
+
+function Animal(nombre,genero){
+    this.nombre = nombre
+    this.genero = genero
+}
+
+Animal.prototype.sonar = function(){
+    console.log("Soy un animal que hace ruidos porque esta vivo")
+}
+
+const snoopy = new Animal("snoopy","Macho") 
+
+console.log(snoopy.nombre)
+snoopy.sonar()
+
+//Herencia Prototipica: Sirve para hacer herencia a partir de prototipos.
+//vamos a crear la clase Perro que sea hija de la clase padre animal
+function Perro(nombre,genero,tamanio){
+    this.super = Animal
+    this.super(nombre,genero)
+    this.tamanio = tamanio
+}
+
+Perro.prototype = new Animal()
+Perro.prototype.constructor = Perro
+
+Perro.prototype.sonar = function(){
+    console.log("Soy un perro y ladro")
+}
+
+Perro.prototype.ladrar = function(){
+    console.log("guauu guauu!!!")
+}
+
+const zeo = new Perro("zeo","macho","grande")
+
+console.log(zeo.tamanio)
+zeo.sonar()
+zeo.ladrar()
+
