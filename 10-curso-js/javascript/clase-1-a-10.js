@@ -1,5 +1,5 @@
 //Clase 3 - Variables: var vs let
-
+/*
 var hola = "hola mundo"
 let hello = "hello world"
 console.log(window)
@@ -35,9 +35,10 @@ console.log("variable musica dentro despues del bloque ",musica2)
 
 
 console.clear()
+*/
 
 //Clase 4 - Constantes
-
+/*
 const PI = 3.1416
 //const NUEVE; NO podesmos declararlas sin valor
 //No podemos dereclarar una variable
@@ -62,9 +63,10 @@ console.log(objeto)
 console.log(colores)
 
 console.clear()
+*/
 
 //Clase 5 - Cadenas de texto (String)
-
+/*
 let nombre = "valentin"
 let apellido = "serassio"
 let saludo = new String("Hola mundo")
@@ -84,9 +86,10 @@ console.log(
 )
 
 console.clear()
+*/
 
 //Clase 6 - Template Strings
-
+/*
 let nombre1 = "valentin"
 let apellido1 = "serassio"
 
@@ -109,9 +112,10 @@ let ul =  `
 `
 console.log(ul)
 console.clear()
+*/
 
 //Clase 7 - Numbers
-
+/*
 let a = 2
 let b = new Number(1)
 let c = 7.19
@@ -132,9 +136,10 @@ console.log(typeof d)
 console.log(typeof parseFloat(d))
 
 console.clear()
+*/
 
 //Clase 8 - booleanos
-
+/*
 let verdadero = true;
 let falso = false;
 let v = Boolean(true)
@@ -149,9 +154,10 @@ console.log(Boolean(""))
 console.log(Boolean(".asd"))
 
 console.clear()
+*/
 
 //Clase 9 - undefined, null & Nan
-
+/*
 //undefined
 let indefinida
 console.log(indefinida)
@@ -163,9 +169,10 @@ let noEsUnNumero = "hola" * 3
 console.log(noEsUnNumero)
 
 console.clear()
+*/
 
 //Clase 10 - Funciones
-
+/*
 //funcion Declarada
 
 function estoEsUnaFuncionQueRetorna(){
@@ -214,5 +221,5 @@ const funcionExpresada = function(nombre){
 
 funcionExpresada("valentin")
 
-
+*/
 
