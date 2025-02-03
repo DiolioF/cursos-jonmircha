@@ -1,5 +1,4 @@
 //Clase 11 - Arrays
-
 /*
 
 const a = []
@@ -36,7 +35,6 @@ console.clear()
 
 
 //clase 12 - Objetos
-
 /*
 
 let a = new String("Hola")
@@ -84,7 +82,7 @@ console.clear()
 */
 
 //clase 13 - Tipos de operadores
-
+/*
 // aritmaetica
 
 // let a = 5 + (5-10) * 3
@@ -104,11 +102,11 @@ console.clear()
 // console.log(7<7)
 // console.log(7 <= 7)
 
-/*
+
  un = es asignacion de variable
  dos == es comparacion de valores
  tres === es comparacion de tipo de dato y valor
-*/ 
+
 
 // console.log(7 == 7)
 // console.log("7" == 7)
@@ -148,7 +146,7 @@ console.clear()
 
 // console.log("***************\n salto de linea \n***************")
 
-/* logicos
+ logicos
 
 !  - Not : Niega, es decir lo que es verdadero lo vuelve falso y vuceversa
 || - Or  : Cuando tenga 2 o mas condiciones, con que una se cumpla, es decir que sea verdadera,
@@ -156,7 +154,7 @@ El OR validara
 && - And: Cuando tenga 2 0 mas condiciones, todas tienen que cumplirse es decir ser verdaderas,
 para que AND se valide
 
-*/
+
 
 // console.log("not")
 // console.log(!true)
@@ -168,9 +166,10 @@ para que AND se valide
 // console.log((9 === 9)&&(8 == "8")) 
 // console.log(!(9 === "9") && !("9" === 9)) 
 
+*/
 
 //Clase 14 - Condicionales / Estructuras de control
-
+/*
 // if - else
 
 // let edad = 35
@@ -182,14 +181,14 @@ para que AND se valide
     
 // }
 
-/*
+
 
 Dejame dormir 0hs - 7hs
 Buenos dias 8hs a 13hs
 Buenas tardes 14hs a 19hs
 Buenas noches 20hs a 23hs
 
-*/
+
 
 // let hora = 25
 
@@ -219,7 +218,7 @@ Buenas noches 20hs a 23hs
 
 //Operador Switch
 
-/*
+
 
 domingo - 0
 lunes - 1
@@ -229,7 +228,7 @@ jueves - 4
 viernes - 5
 sabado - 6
 
-*/
+
 
 // let diap = 2
 
@@ -259,6 +258,7 @@ sabado - 6
 //         console.log("No es un dia valido")
 //         break
 // }
+*/
 
 //clase 15 - Ciclos/loops  [Estructuras de repeticion]
 /*
@@ -275,10 +275,10 @@ do{
     console.log("do while" + contador)
     contador++
 }while(contador < 10)
-*/
+
 
 // for (inicializacion de variable; condicion; incremento o decremento){codigo del bucle}
-/*
+
 console.log("***************\n For \n***************")
 
 for (let i = 0; i < 10; i++) {
