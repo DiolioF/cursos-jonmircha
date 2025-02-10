@@ -471,6 +471,21 @@ isEmailValid("hfjkhiu65d-sd-ds@gd.com")
 //Clase 40 - Ejercicios ( 7 / 10 )
 
 //21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
+
+const arrayAlCuadrado = array => {
+    if(!array)return console.log("No se introdujo ningun dato")
+    if(!(array instanceof Array))return console.log("No se introdujo un array")
+    if(array == [])return console.log("El array introducido esta vacio")
+    if(array.forEach(el => {if(typeof el != "number")return true})){return console.log("Alguno de los elementos no es un numero")}
+    let arrayP2 = []
+    array.forEach(el=>arrayP2.push(el*el))
+    return arrayP2
+}
+
+console.log(arrayAlCuadrado([" ","ds"]))
+
+
+
 //22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
 //23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
 
