@@ -475,19 +475,59 @@ isEmailValid("hfjkhiu65d-sd-ds@gd.com")
 const arrayAlCuadrado = array => {
     if(!array)return console.log("No se introdujo ningun dato")
     if(!(array instanceof Array))return console.log("No se introdujo un array")
-    if(array == [])return console.log("El array introducido esta vacio")
-    if(array.forEach(el => {if(typeof el != "number")return true})){return console.log("Alguno de los elementos no es un numero")}
+    if(array.length == 0)return console.log("El array introducido esta vacio")
+    let condicion = false
+    array.forEach(el => {if(typeof el != "number")return condicion = true})
+    if(condicion){return console.log("Alguno de los elementos no es un numero")}
     let arrayP2 = []
     array.forEach(el=>arrayP2.push(el*el))
     return arrayP2
 }
 
-console.log(arrayAlCuadrado([" ","ds"]))
+console.log(arrayAlCuadrado([2,4,5]))
 
 
 
 //22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
+
+const minMax = array => {
+    if(!array)return console.log("No se introdujo ningun dato")
+    if(!(array instanceof Array))return console.log("No se introdujo un array")
+    if(array.length == 0)return console.log("El array introducido esta vacio")
+    let condicion = false
+    array.forEach(el => {if(typeof el != "number")return condicion = true})
+    if(condicion){return console.log("Alguno de los elementos no es un numero")}
+    let numMax = array[0]
+    let numMin = array[0]
+    for(let el of array){
+        if(el > numMax)numMax = el
+        if(el < numMin)numMin = el
+    }
+    return {
+        numMax,
+        numMin
+    }
+}
+
+console.log(minMax([1,2,3,4,-2345,5,0,345]))
 //23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
+
+
+const arrayParImpar = arreglo => {
+    if(!arreglo)return console.log("No se introdujo ningun array")
+    if(arreglo.length == 0)return console.log("se introdujo un array vacio")
+    if(!(arreglo instanceof Array))return console.log("El dato introducido no es un array")
+    let condicion = false
+    arreglo.forEach(el=>{if(typeof el != "number")return condicion = true})
+    if(condicion)return console.log("El array introducido no se puede analizar")
+    let arrayPar = []
+    let arrayImpar = []
+    arreglo.forEach(el => {if(el%2 == 0){arrayPar.push(el)}else{arrayImpar.push(el)}})
+    return {arrayPar,arrayImpar}
+}
+
+console.log(arrayParImpar([1,2,3,4,5,6,7,8,9,0,29]))
+console.log(arrayParImpar())
 
 //Clase 41 - Ejercicios ( 7 / 10 )
 
