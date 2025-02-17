@@ -469,7 +469,7 @@ isEmailValid("hfjkhiu65d-sd-ds@gd.com")
 */
 
 //Clase 40 - Ejercicios ( 7 / 10 )
-
+/*
 //21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
 
 const arrayAlCuadrado = array => {
@@ -524,3 +524,4 @@ const arrayParImpar = arreglo => {
     return {arrayPar,arrayImpar}
 }
 console.log(arrayParImpar([1,2,3,4,5,6,7,8,9,0,29]))
+*/
