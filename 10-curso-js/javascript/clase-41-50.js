@@ -69,6 +69,18 @@ console.log(arrayNumProm([9,8,7,6,5,4,3,2,1,0]))
 //{id,titulo,director,anio,paisESOrigen,genero, calificacion}
 class Pelicula{
     constructor({id,titulo,director,anio,paisESOrigen,genero, calificacion}){
-        
+        let validarID = /^\d{2}[A-Z]{7}$/ig
+        if(!(validarID.test(id))){
+            throw Error("El id introducido no es valido")
+        }else{
+            this.id = id
+        }
+
+
+
             }
 }
+
+let peli = new Pelicula({id:"12asdfghj"})
+
+peli
