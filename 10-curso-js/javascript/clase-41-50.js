@@ -1,4 +1,4 @@
-//Clase 41 - Ejercicios ( 8 / 10 )
+//Clase 41 - Ejercicios ( 9 / 10 )
 /*
 //24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.
 const arrayOrdenado = array => {
@@ -49,7 +49,7 @@ console.log(arrayNumProm([9,8,7,6,5,4,3,2,1,0]))
 */
 
 //Clase 43 - Ejercicios ( 10 / 10 )
-
+/*
 //27) Programa una clase llamada Pelicula.
 //La clase recibirá un objeto al momento de instanciarse con los siguentes datos: id de la película en IMDB, titulo, director, año de estreno, país o países //de origen, géneros y calificación en IMBD.
 //Todos los datos del objeto son obligatorios.
@@ -142,4 +142,331 @@ let arrPelis = []
 
 arregloPeliculas.map(el => arrPelis.push(new Pelicula(el)))
 arrPelis.map(el => el.fichaTecnica())
+
+//Todo este codigo se podria mejor mirando el video de Jon, ya que se podrian crear metodos en la clase , las cuales se llamaran con this para validar de forma mas facil y podriamos pasar los genero aceptados en un array con el un metodo Static get generosAceptados(){return [array de generos]} el cual podriamos llamar para validar si incluye los generos introducidos
+*/
+
+//Clase 44 - Temporizadores (setTimeout & SetInterval)
+/*
+console.log("inicio")
+
+setTimeout(() => {
+    console.log("Ejecutando un setTimeout, esto se ejecuta una sola vez")
+}, 3000);
+
+setInterval(() => {
+    console.log("Ejecutando un SetInterval, este se ejecuta indefinidamente cada cierto intervalo de tiempo")
+},1000)
+
+function imprimirDate(){
+    console.log(new Date().toLocaleTimeString())
+}
+
+let temporizadorIntervalos = setInterval(imprimirDate,1000)
+let temporizadorTimeout = setTimeout(imprimirDate,1000)
+clearInterval(temporizadorIntervalos)
+clearTimeout(temporizadorTimeout)
+*/
+
+//Clase 45 - Asincronia y Event Loop
+/*
+ Antes de explicar como funciona el modelo de JavaScript es importante entender algunos conceptos:
+
+     Procesamiento Single thread y Multi thread.
+     Operaciones de CPU y Operaciones de I / O.
+     Operaciones Concurrentes y Paralelas.
+     Operaciones Bloqueantes y No Bloqueantes.
+     Operaciones Síncronas y Asíncronas.
+
+     Javascript usa un modelo asíncrono y no bloqueante, con un loop de eventos implementado en un sólo hilo, (single thread) para operaciones de entrada y salida (input/output).
+     
+
+
+     //Código Síncrono Bloquenate
+    (() => {
+      console.log("Código Síncrono");
+      console.log("Inicio");
+
+      function dos() {
+        console.log("Dos");
+      }
+
+      function uno() {
+        console.log("Uno");
+        dos();
+        console.log("Tres");
+      }
+
+      uno();
+      console.log("Fin");
+    })();
+
+    console.log("********************");
+
+    //Código Asíncrono No Bloquenate
+    (() => {
+      console.log("Código Asíncrono");
+      console.log("Inicio");
+
+      function dos() {
+        setTimeout(function () {
+          console.log("Dos");
+        }, 1000);
+      }
+
+      function uno() {
+        setTimeout(function () {
+          console.log("Uno");
+        }, 0);
+        dos();
+        console.log("Tres");
+      }
+
+      uno();
+      console.log("Fin");
+    })(); */
+
+//Clase 46 - Callbacks
+/*
+//ES una función que se proporciona como argumento a otra función y que se invoca al final o en un punto específico del ciclo de vida de la función receptora. permiten que el código sea asíncrono, lo cual es especialmente útil para operaciones que toman tiempo, como solicitudes de red o lectura de archivos.
+
+function cuadradoCallback(value,callback){
+    setTimeout(()=>{
+        callback(value,value*value)
+    },0 | Math.random() * 1000)
+}
+
+cuadradoCallback(0,(value,result)=>{
+    console.log("Inicia Callback")
+    console.log(`Callback: ${value}, ${result}`)
+    cuadradoCallback(1,(value,result)=>{
+        console.log("Inicia Callback")
+        console.log(`Callback: ${value}, ${result}`)
+        cuadradoCallback(2,(value,result)=>{
+            console.log("Inicia Callback")
+            console.log(`Callback: ${value}, ${result}`)
+            cuadradoCallback(3,(value,result)=>{
+                console.log("Inicia Callback")
+                console.log(`Callback: ${value}, ${result}`)
+                cuadradoCallback(4,(value,result)=>{
+                    console.log("Inicia Callback")
+                    console.log(`Callback: ${value}, ${result}`)
+                    cuadradoCallback(5,(value,result)=>{
+                        console.log("Inicia Callback")
+                        console.log(`Callback: ${value}, ${result}`)
+                        cuadradoCallback(6,(value,result)=>{
+                            console.log("Inicia Callback")
+                            console.log(`Callback: ${value}, ${result}`)
+                            console.log(`Fin de las Callbacks`)
+                            console.log("Callback Hell !!! 👿🤘")
+                            console.log("https://callbackhell.com/")      
+                        })
+                    })
+                })
+            })
+        })
+    })
+})
+
+*/
+
+//Clase 47 - Promesas
+/*
+function cuadradoPromise(value){
+    if (typeof value !== "number"){
+        return Promise.reject(`Error el valor "${value}" no es un numero`)
+    }
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve({
+                value,
+                result: value * value
+            })
+        },2000)
+    })
+}
+
+console.log("inicia promise: ")
+
+cuadradoPromise(0)
+    .then(obj=>{
+        console.log(obj)
+        return cuadradoPromise(1)
+    })
+    .then(obj=>{
+        console.log(obj)
+        return cuadradoPromise(2)
+    })
+    .then(obj=>{
+        console.log(obj)
+        return cuadradoPromise(3)
+    })
+    .then(obj=>{
+        console.log(obj)
+        return cuadradoPromise(4)
+    })
+    .then(obj=>{
+        console.log(obj)
+        return cuadradoPromise(5)
+    })
+    .then(obj=>{
+        console.log(obj)
+        console.log("Fin promise")
+    })
+    .catch(err => console.error(err));
+
+//Esta seria una forma de declarar una promesa pura.
+    const miPromesa = new Promise((resolve, reject) => {
+        // Simulación de operación asíncrona
+        setTimeout(() => {
+          const exito = true; // o false para simular un fallo
+          if (exito) {
+            resolve("Operación exitosa");
+          } else {
+            reject("Ocurrió un error");
+          }
+        }, 2000); // 2 segundos de demora
+      });
+      
+      // Manejo de la promesa
+      miPromesa
+        .then((resultado) => {
+          console.log(resultado) // "Operación exitosa"
+          return miPromesa
+        })
+        .then((resultado) => {
+            console.log(resultado)
+        })
+        .then((resultado) => {
+            console.log(resultado)
+        })
+        .catch((error) => {
+          console.log(error); // "Ocurrió un error"
+        });
+
+const promesa = (value) => new Promise((resolve,reject)=>{
+    if(typeof value !== "number")throw Error("Se introdujo un string")
+    setTimeout(()=>{
+        resolve({value,result: value*value})
+    },2000)
+})
+
+promesa("0")
+    .then(resolve => {
+        console.log(resolve) 
+        return promesa(1)
+    })
+    .then(resolve => {
+        console.log(resolve)
+        return promesa(2)
+    })
+    .then(resolve => {
+        console.log(resolve)
+        return promesa(3)
+    })
+    .then(resolve => {
+        console.log(resolve)
+        return promesa(4)
+    })
+    .then(resolve => {
+        console.log(resolve)
+        return promesa(5)
+    })
+    .then(resolve => {
+        console.log(resolve)
+        console.log("Final promesa")
+    })
+    .catch(err => console.error(err))
+*/
+
+//Clase 48 - Async / Await
+/*
+//funcion promesa
+function cuadradoPromise(value){
+    if (typeof value !== "number"){
+        return Promise.reject(`Error el valor "${value}" no es un numero`)
+    }
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve({
+                value,
+                result: value * value
+            })
+        },2000)
+    })
+}
+
+//Para indicarle a la funcion que va a ser asincrona usamos la palabras async al principio
+//Funcion Async - Declarada
+async function funcionAsincronaDeclarada(){
+    try {
+        console.log("Inicializando Funcion Asincrona")
+
+        let obj = await cuadradoPromise(0)
+        console.log(`Async  Function: ${obj.value}, ${obj.result}`)
+
+        obj = await cuadradoPromise(1)
+        console.log(`Async  Function: ${obj.value}, ${obj.result}`)
+
+        obj = await cuadradoPromise(2)
+        console.log(`Async  Function: ${obj.value}, ${obj.result}`)
+
+        obj = await cuadradoPromise("3")
+        console.log(`Async  Function: ${obj.value}, ${obj.result}`)
+
+        obj = await cuadradoPromise(4)
+        console.log(`Async  Function: ${obj.value}, ${obj.result}`)
+
+        obj = await cuadradoPromise(5)
+        console.log(`Async  Function: ${obj.value}, ${obj.result}`)
+
+        console.log("Fin de Async Function")
+
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+funcionAsincronaDeclarada()
+
+//Function Async - Expresada
+
+const funcionAsincronaExpresado = async () => {
+    try {
+        console.log("Inicializando Funcion Asincrona")
+
+        let obj = await cuadradoPromise(0)
+        console.log(`Async  Function: ${obj.value}, ${obj.result}`)
+
+        obj = await cuadradoPromise(1)
+        console.log(`Async  Function: ${obj.value}, ${obj.result}`)
+
+        obj = await cuadradoPromise(2)
+        console.log(`Async  Function: ${obj.value}, ${obj.result}`)
+
+        obj = await cuadradoPromise(3)
+        console.log(`Async  Function: ${obj.value}, ${obj.result}`)
+
+        obj = await cuadradoPromise(4)
+        console.log(`Async  Function: ${obj.value}, ${obj.result}`)
+
+        obj = await cuadradoPromise("5")
+        console.log(`Async  Function: ${obj.value}, ${obj.result}`)
+
+        console.log("Fin de Async Function")
+
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+funcionAsincronaExpresado()
+*/
+
+//Clase 49 - Symbols
+
+
+
+
+
 
