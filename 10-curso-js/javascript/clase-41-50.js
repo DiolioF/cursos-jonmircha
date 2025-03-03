@@ -464,9 +464,70 @@ funcionAsincronaExpresado()
 */
 
 //Clase 49 - Symbols
+/*
+const NOMBRE = Symbol("nombre1")
+const FUNCION = Symbol("funcion1")
 
+const obj = {
+    [NOMBRE]: "Valentin Ian Serassio",
+    NOMBRE: "valentin"
+}
 
+console.log(obj)
 
+console.log(obj.NOMBRE)
+console.log(obj[NOMBRE])
 
+obj.funcion = () => {console.log(`hola soy una funcion dentro de una objeto en javascript ${this}`)}
+obj[FUNCION] = function(){console.log("Soy una funcion con un simbolo como llave")}
+obj.funcion()
+obj[FUNCION]()
+
+console.log(obj)
+
+for(const i in obj){
+    console.log(i)
+    console.log(obj[i])
+}
+
+console.log(Object.getOwnPropertySymbols(obj))
+*/
+
+//Clase 50 - Sets
+/*
+const set = new Set([1,2,2,3,3,false,true,true,"hola","HOla"])
+//Debemos recordar que al ser case sensitive el hola esta en dos diferentes case
+console.log(set)
+//Para saber cuantos elementos tiene usamos .size
+console.log(set.size)
+//Para agregar valores al set usamos .add()
+set.add("patas")
+set.add("sofitness love")
+set.add("Quiero andar en bici con mi novia, porque la amo mucho")
+
+console.log(set.size)
+
+for(let item of set){
+    console.log(item)
+}
+
+set.forEach(item => console.log(item))
+//para poder acceder a sus elementos de forma individual debemos castear el set a Array con 
+
+let setToArray = Array.from(set)
+
+console.log(setToArray[4])
+//para eliminar algo del set debemos usar el metodo .delete(valor) con el valor a eleminar dentro
+set.delete("HOla")
+console.log(set)
+//con el metodo .has(valor) sabemos si el set tiene o no el valor
+console.log(set.has("HOla"))
+console.log(set.has("hola"))
+//con el metodo .clear() podemos borrar todos los valores del set
+
+set.clear() //lo deja vacio
+
+console.log(set)
+*/
 
 
