@@ -45,5 +45,113 @@ const valoresMapa2 = [...mapa2.values()]
 
 */
 
-//clase 52 -
+//clase 52 - WeakSets & WeakMaps
+/*
+//WeakSets
+let ws = new WeakSet();
 
+let obj1 = { name: "Objeto 1" };
+let obj2 = { name: "Objeto 2" };
+
+ws.add(obj1);
+ws.add(obj2);
+
+console.log(ws.has(obj1)); // true
+
+// Si en algún momento dejamos de referenciar a obj1 en el resto del código...
+obj1 = null; 
+// El garbage collector puede eliminar ese objeto y, en consecuencia, se eliminará de ws.
+
+//WeakMaps
+let wm = new WeakMap();
+
+let keyObj = { id: 1 };
+wm.set(keyObj, "Información confidencial");
+
+console.log(wm.get(keyObj)); // "Información confidencial"
+
+// Si keyObj se vuelve inaccesible por el resto del programa...
+keyObj = null;
+// La asociación en wm puede desaparecer del todo gracias a la recolección de basura.
+*/
+
+//Clase 53 - Iterables & Iterators
+/*
+const iterable = [1,2,3,4,5]
+
+
+//Accedemos al iterador del iterable
+const iterator = iterable[Symbol.iterator]()
+
+console.log(iterable)
+console.log(iterator)
+//metodo .next() va pasando el iterador hacia su siguiente valor
+//devuelve un objeto con dos valores {value: "valor", done: true||false}
+console.log(iterator.next())
+//console.log(iterator.next())
+//console.log(iterator.next())
+//console.log(iterator.next())
+//console.log(iterator.next())
+//console.log(iterator.next())
+
+let next = iterator.next()
+
+while (!next.done){
+    console.log(next.value)
+    next = iterator.next()
+}
+*/
+
+//clase 54 - Generators
+/*
+function* iterable (){
+    yield "hola"
+    console.log("hola consola")
+    yield "hola 2"
+    console.log("Seguimos con más instrucciones de nuestro codigo")
+    yield "hola 3"
+    yield "hola 4"
+}
+
+let iterador = iterable()
+
+//console.log(iterador)
+//console.log(iterador.next())
+//console.log(iterador.next())
+
+//esta es otra forma de iterar sobre el iterador
+for(let y of iterador){
+    console.log(y)
+}
+
+const arr = [...iterable()]
+console.log(arr)
+
+function cuadrado(valor){
+    setTimeout(()=>{
+        console.log({valor, resultado: valor*valor})
+    },Math.random()*3000)
+
+    return{valor, resultado: valor * valor}
+}
+
+function* generador(){
+    console.log("inicia generator")
+    yield cuadrado(0)
+    yield cuadrado(1)
+    yield cuadrado(2)
+    yield cuadrado(3)
+    yield cuadrado(4)
+    yield cuadrado(5)
+    console.log("termina generador")
+
+}
+
+let gen = generador()
+
+for(let y of gen){
+    console.log(y)
+}
+*/
+
+//Clase 55 - Proxies

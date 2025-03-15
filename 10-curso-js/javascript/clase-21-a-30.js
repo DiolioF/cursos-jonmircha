@@ -291,7 +291,7 @@ console.log("patas")
 
 //Clase 27 - Objeto Date
 /*
-//Esto hace referencia al horario de la computadora del usuario, ya que son metodos que toman el navegador como contexto
+//Esto hace referencia a la fecha de la computadora del usuario, ya que son metodos que toman el navegador como contexto
 
 console.log(Date())
 //Guardamos la fecha en una vairable
@@ -363,7 +363,7 @@ console.log(Math.random()*1000)
 //tener en cuenta que se toman los valores como truthy o falsy
 
 //Operador cortocircuito OR
-//Usa primero siempre el de la derecha en caso de ser true
+//Usa primero siempre el de la izquierda en caso de ser true
 let cortocircuitoOR1 = "valor 1" || "valor 2" 
 
 cortocircuitoOR1
