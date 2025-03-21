@@ -1,0 +1,12 @@
+{
+    "cadena": "Valentin",
+    "numero": "19",
+    "booleano": "true",
+    "arreglo": ["ciclismo","programar","cocinar"],
+    "objeto": {
+        "twitter": "@val4nse",
+        "email":"valentinserassio@gmail.com"
+    },
+    "nulo":"null"
+    
+}
