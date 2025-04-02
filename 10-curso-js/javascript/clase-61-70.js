@@ -98,7 +98,7 @@ console.log($linkDom.hasAttribute("data-id"))
 */
 
 //Clase 64 - DOM: Estilos y Variables CSS
-
+/*
 const $linkDom = document.querySelector(".link-dom")
 // .style nos devuelve una lista con los estilos de la etiqueta style de un elemento html
 console.log($linkDom.style)
@@ -141,20 +141,31 @@ $body.style.color = varYellowColor
 $html.style.setProperty("--dark-color","#000")
 varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color")
 $body.style.backgroundColor = varDarkColor
+*/
 
+//Clase 65 - DOM: Clases CSS
+/*
+const $card = document.querySelector(".card")
 
+console.log($card)
+//Devuelve el valor general del atributo class = "clase1 clase2"
+console.log($card.className)
+//Devuelve una especie de array con las clases guardadas por separado 
+console.log($card.classList)
+//Consultar si el elemento contiene la clase indicada .classlist.contains("rotate 45")
+console.log($card.classList.contains("rotate-45"))
+//Añadir una clase al elemento classList.add("nombreClase")
+$card.classList.add("rotate-45")
+console.log($card.classList)
+//removemos una clase con .classList.remove("nombreClase")
+$card.classList.remove("rotate-45")
+// .classList.toggle("nombreCLASE") actua como un interruptor de una clase, si el elemento tiene la clase se la quita y sino la tiene se la agrega
+$card.classList.toggle("rotate-45")
+//Para reemplazar una clase css por otra: classList.replace("NOmbreClase","clasereemplazo")
+$card.classList.replace("rotate-45","rotate-135")
+//Usando esto metodos podemos agregar, quitar, hacer toggle a mas de una clase a la vez
+$card.classList.add("opacity-80","sepia")
+*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Clase 66 - DOM: Texto y HTML
 
