@@ -1,8 +1,7 @@
 //Clase 61 - DOM: Introduccion
 /*
-
 console.log("Elementos del Documento")
-console.log(window.document)
+
 console.log(document)
 console.log(document.head)
 console.log(document.body)
@@ -15,157 +14,275 @@ console.log(document.images)
 console.log(document.forms)
 console.log(document.styleSheets)
 console.log(document.scripts)
-setTimeout(()=>{
+setTimeout(() => {
     console.log(document.getSelection().toString())
-    //document.writeln("<h2>Hola mundo desde el DOM</h2>")
-},4000)
+}, 3000); 
 */
 
-//Clase 62 - DOM: Nodos, elementos y selectores
+//Clase 62 - Dom: Nodos, elementos y selectores
 /*
-console.log(document.getElementsByTagName("li"))
-console.log(document.getElementsByClassName("card"))
-console.log(document.getElementsByName("nombre"))
 console.log(document.getElementById("menu"))
-
-//Recibe como parametro un selector valido de css (id,clase,elemento), aca si hay que especificar con . para clases, # para ids
 console.log(document.querySelector("#menu"))
-//QuerySelector solo va a traer al primer elemento que encuentre
-console.log(document.querySelector("a"))
-//Para ver todos podemos usar querySelectorAll
 console.log(document.querySelectorAll("a"))
-//Metodos que podemos utilizar con querySelectorAll():
-//Obtener longitud
 console.log(document.querySelectorAll("a").length)
-//Iterar sobre el nodelist
-document.querySelectorAll("a").forEach(e=>console.log(e))
-//Extraer solo las posicion que pasemos entre []
-console.log(document.querySelectorAll(".card")[1])
-//Tambien podemos seleccionar por desendencia
+document.querySelectorAll("a").forEach(el => console.log(el))
+console.log(document.querySelector("#menu li"))
 console.log(document.querySelectorAll("#menu li"))
 */
+
+//Clase 63 - Dom: Atributos y Data-Attributes
 /*
-//Clase 63 - Atributos y Data-Attributes
-//Atributos Normales
-//Con esta notacion podemos obtener el valor de un atributo
 console.log(document.documentElement.lang)
-//Con el metodo .getAttribute("Atributo") tambien obtenemos el valor de un atributo
 console.log(document.documentElement.getAttribute("lang"))
-//La unica diferencia es que en algunos casos pueden llegar a devolver valores diferentes
 console.log(document.querySelector(".link-dom").href)
 console.log(document.querySelector(".link-dom").getAttribute("href"))
 
-
-//Asi podemos cabiar el valor del atributocon la notacion del .
 document.documentElement.lang = "en"
-console.log(document.documentElement.lang)
-//Con el metodo .setAttribute("atributo","nuevoValor") tambien podemos cambiar el valor del atributo
-document.documentElement.setAttribute("lang","es-AR")
+
 console.log(document.documentElement.getAttribute("lang"))
 
-//Guardar elementos del DOM en variables para acortar la escritura
-//Podemos usar tanto Const como let para guardarlos
-//Por buenas practicas se pone $nombre para hacer ref a que guarda un elemento del dom
-const $linkDom = document.querySelector(".link-dom")
-console.log($linkDom)
-console.log($linkDom.getAttribute("href"))
+document.documentElement.setAttribute("lang","ES-AR")
 
-$linkDom.setAttribute("target","_blank")
-$linkDom.setAttribute("rel","noopener")
-$linkDom.setAttribute("href","https://www.youtube.com/jonmircha")
-//el metodo .hasAttribute("atributo") nos arroja un booleano para saber si contiene el atributo
-console.log($linkDom.hasAttribute("rel"))
-//el metodo .removeAttribute("atributo") elimina el atributo
-$linkDom.removeAttribute("rel")
-console.log($linkDom.hasAttribute("rel"))
+console.log(document.documentElement.getAttribute("lang"))
 
-//Data-attributes
-console.log($linkDom.getAttribute("data-description"))
-//El .dataset nos arroja un DOMStringMap con todos los elementos data-
-console.log($linkDom.dataset)
-//para imprimir un unico valor con esta notacion
-console.log($linkDom.dataset.description)
-//Podemos modificar un valor tanto con .setAttribute 
-$linkDom.setAttribute("data-description","Modelo de Objeto del Documento")
-console.log($linkDom.dataset.description)
-//Modificando con la notacion del .
-$linkDom.dataset.description = "Suscribete al canal del buen jon"
-console.log($linkDom.dataset.description)
-//Tambien podes usar .hasAttribute() y .removeAttribute() con los data-attributes
-console.log($linkDom.hasAttribute("data-id"))
-$linkDom.removeAttribute("data-id")
-console.log($linkDom.hasAttribute("data-id"))
+const $linkDOM = document.querySelector(".link-dom")
+
+$linkDOM.setAttribute("target","_blank")
+$linkDOM.setAttribute("href","https://youtube.com/jonmircha")
+$linkDOM.setAttribute("rel","noopener")
+
+console.log($linkDOM.hasAttribute("rel"))
+$linkDOM.removeAttribute("rel")
+console.log($linkDOM.hasAttribute("rel"))
+
+//Data-Attributes
+
+console.log($linkDOM.getAttribute("data-description"))
+console.log($linkDOM.dataset)
+console.log($linkDOM.dataset.description)
+$linkDOM.setAttribute("data-description","Modelo de Objeto del Documento")
+console.log($linkDOM.dataset.description)
+$linkDOM.dataset.description = "Suscribete a mi canal y comparte"
+console.log($linkDOM.dataset.description)
+console.log($linkDOM.hasAttribute("data-id"))
+$linkDOM.removeAttribute("data-id")
+console.log($linkDOM.hasAttribute("data-id"))
 */
 
-//Clase 64 - DOM: Estilos y Variables CSS
+//Clase 64 - Dom: Estilos y variables CSS
 /*
-const $linkDom = document.querySelector(".link-dom")
-// .style nos devuelve una lista con los estilos de la etiqueta style de un elemento html
-console.log($linkDom.style)
-// tambien podemos acceder con .getAttribute("style"), pero es menos recomendado
-console.log($linkDom.getAttribute("style"))
-//Para acceder a los estilos de forma individual usamos .style.propiedad particular
-console.log($linkDom.style.backgroundColor)
-console.log($linkDom.style.color)
-//Para obtener todos los estilos, pero de forma computada, es decir con los valores que le asigna el user-agent(navegador) por defecto usamos getComputedStyle(rutaDom)
-console.log(window.getComputedStyle($linkDom))
-//Para obtener algun valor en particular usamos getComputedStyle(rutaDom).getPropertyValue("prop")
-console.log(getComputedStyle($linkDom).getPropertyValue("color"))
-//Para modificar los estilos de alguna propiedad debemos usar el metodo:
-// rutaDom.style.setProperty("propiedad","valor-a-setear")
-$linkDom.style.setProperty("text-decoration","none")
-$linkDom.style.setProperty("display","block")
-$linkDom.style.width = "50%"
-$linkDom.style.margin = "0px auto"
-$linkDom.style.textAlign = "center"
-$linkDom.style.padding = "1rem"
-$linkDom.style.borderRadius = ".5rem"
+const $linkDOM = document.querySelector(".link-dom")
 
-console.log($linkDom.style)
-console.log($linkDom.getAttribute("style"))
-console.log(getComputedStyle($linkDom))
+console.log($linkDOM.style)
+
+console.log($linkDOM.getAttribute("Style"))
+console.log($linkDOM.style.backgroundColor)
+console.log($linkDOM.style.color)
+console.log(getComputedStyle($linkDOM))
+console.log(getComputedStyle($linkDOM).getPropertyValue("color"))
+
+$linkDOM.style.setProperty("text-decoration","none")
+$linkDOM.style.setProperty("display","block")
+$linkDOM.style.width = "50%"
+$linkDOM.style.textAlign = "center"
+$linkDOM.style.margin = "auto"
+$linkDOM.style.padding = "1rem"
+$linkDOM.style.borderRadius = ".5rem"
+
+console.log($linkDOM.style)
+console.log($linkDOM.getAttribute("style"))
+console.log(getComputedStyle($linkDOM))
 
 //Variables CSS - Custom Properties CSS
 
 const $html = document.documentElement,
-      $body = document.body 
+      $body = document.body
 
-let varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color"),
-    varYellowColor = getComputedStyle($html).getPropertyValue("--yellow-color")
+let varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color")
+let varYellowColor = getComputedStyle($html).getPropertyValue("--yellow-color")
 
-console.log(varDarkColor,varYellowColor)
+console.log(varDarkColor, varYellowColor)
 
 $body.style.backgroundColor = varDarkColor
 $body.style.color = varYellowColor
 
 $html.style.setProperty("--dark-color","#000")
+
 varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color")
-$body.style.backgroundColor = varDarkColor
+
+$body.style.setProperty("background-Color",varDarkColor)
 */
 
-//Clase 65 - DOM: Clases CSS
+//Clase 65 - Clases CSS
 /*
 const $card = document.querySelector(".card")
 
 console.log($card)
-//Devuelve el valor general del atributo class = "clase1 clase2"
 console.log($card.className)
-//Devuelve una especie de array con las clases guardadas por separado 
 console.log($card.classList)
-//Consultar si el elemento contiene la clase indicada .classlist.contains("rotate 45")
 console.log($card.classList.contains("rotate-45"))
-//Añadir una clase al elemento classList.add("nombreClase")
 $card.classList.add("rotate-45")
+console.log($card.classList.contains("rotate-45"))
+console.log($card.className)
 console.log($card.classList)
-//removemos una clase con .classList.remove("nombreClase")
+
 $card.classList.remove("rotate-45")
-// .classList.toggle("nombreCLASE") actua como un interruptor de una clase, si el elemento tiene la clase se la quita y sino la tiene se la agrega
+
 $card.classList.toggle("rotate-45")
-//Para reemplazar una clase css por otra: classList.replace("NOmbreClase","clasereemplazo")
 $card.classList.replace("rotate-45","rotate-135")
-//Usando esto metodos podemos agregar, quitar, hacer toggle a mas de una clase a la vez
 $card.classList.add("opacity-80","sepia")
+$card.classList.remove("opacity-80","sepia")
+$card.classList.toggle("opacity-80","sepia")
+*/
+/*
+const $whatISDom = document.getElementById("que-es")
+
+console.log($whatISDom)
+
+let text = `
+    <p>
+    El modelo de Objetos del Documento (Document object Model) es una API para documentos HTML y XML
+    </p>
+    <p>
+    El DOM no es parte de las especificaciones de javascript, es una API para los navegadores
+    </p>
+`
+
+$whatISDom.textContent = text 
+$whatISDom.innerHTML = text
+$whatISDom.outerHTML = text
 */
 
-//Clase 66 - DOM: Texto y HTML
 
+//Clase 67 - Dom traversing
+/*
+const $cards = document.querySelector(".cards")
+
+console.log($cards)
+
+console.log($cards.children) //HTMLCollection con Elementos
+console.log($cards.children[2]) //Seleccionasmos al que nos interese de la coleccion
+console.log($cards.parentElement) //nos muestra el padre de la etiqueta seleccionada
+console.log($cards.firstElementChild) //Nos selecciona el primer elemento hijo
+console.log($cards.lastElementChild) //nos selecciona el ultimo elemento hijo
+console.log($cards.previousElementSibling) //Elemento hermano previo
+console.log($cards.nextElementSibling) //Elemento hermano proximo
+console.log($cards.children[3].closest("section")) //Nos devuelve el elemento mas cercano con esa etiqueta
+*/
+
+//Clase 68 - Dom: creando elementos y fragmentos
+/*
+const $figure = document.createElement("figure"),
+      $img = document.createElement("img"),
+      $figcaption = document.createElement("figcaption"),
+      $figcaptionText = document.createTextNode("FOTO 6"),
+      $cards = document.querySelector(".cards"),
+      $figure2 = document.createElement("figure")
+
+$img.setAttribute("src","https://placehold.co/200x200")
+$img.setAttribute("alt","foto 200x200")
+
+$figure.classList.add("card")
+
+$figcaption.appendChild($figcaptionText)
+
+$figure.appendChild($img)
+$figure.appendChild($figcaption)
+
+$cards.appendChild($figure)
+
+$figure2.innerHTML = `
+<img src="https://placehold.co/200x200">
+<figcaption>Foto 7</figcaption>
+`
+
+$figure2.classList.add("card")
+$cards.appendChild($figure2)
+
+const estaciones = ["primavera","verano","otoño","invierno"],
+    $ul = document.createElement("ul")
+
+document.body.appendChild($ul)
+
+estaciones.forEach(el => {
+    const $li = document.createElement("li")
+    $li.textContent = el
+    $ul.appendChild($li)
+})
+
+const continentes = ["Africa","America","Asia","Europa","Oceania"],
+    $ul2 = document.createElement("ul")
+
+    document.body.appendChild($ul2)
+    $ul2.innerHTML = ""
+    continentes.forEach(el => $ul2.innerHTML += `<li>${el}</li>`)
+
+//Fragmentos del dom
+
+const meses = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"]
+
+const $ul3 = document.createElement("ul"),
+      $frag = document.createDocumentFragment()
+
+meses.forEach(el => {
+    const $li = document.createElement("li")
+    $li.textContent = el
+    $frag.appendChild($li)
+})
+
+$ul3.appendChild($frag)
+
+document.body.appendChild($ul3)
+*/
+
+//Clase 69 - DOM: Template HTML
+/*
+const $cards = document.querySelector(".cards"),
+      $template = document.getElementById("template-card").content,
+      $fragment = document.createDocumentFragment(),
+      cardContent =[
+        {title:"foto 1",
+         img: "https://placehold.co/200x200"},
+         {title:"foto 2",
+         img: "https://placehold.co/200x200"},
+         {title:"foto 3",
+         img: "https://placehold.co/200x200"},
+         {title:"foto 4",
+         img: "https://placehold.co/200x200"},
+         {title:"foto 5",
+         img: "https://placehold.co/200x200"},
+         {title:"foto 6",
+         img: "https://placehold.co/200x200"},
+        ]
+
+cardContent.forEach(el=>{
+    $template.querySelector("img").setAttribute("src",el.img)
+    $template.querySelector("img").setAttribute("alt",el.title)
+    $template.querySelector("figcaption").textContent = el.title
+
+    let $clone = document.importNode($template,true)
+    $fragment.appendChild($clone)
+})
+
+$cards.appendChild($fragment)
+*/
+
+//Clase 70 - DOM: Modificiando Elementos (OLD Style)
+
+const $cards = document.querySelector(".cards"),
+      $newCard = document.createElement("figure"),
+      $cloneCards = $cards.cloneNode(true)
+
+$newCard.innerHTML = `
+ <img src="https://placehold.co/200x200" alt="any">
+ <figcaption>Any</figcaption>
+`
+
+$newCard.classList.add("card")
+
+//Reemplazar uun nodo:
+//$cards.replaceChild($newCard,$cards.children[2])
+//$cards.insertBefore($newCard,$cards.firstElementChild)
+//$cards.removeChild($cards.lastElementChild)
+
+document.body.appendChild($cloneCards)
