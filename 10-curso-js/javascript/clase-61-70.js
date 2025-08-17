@@ -286,3 +286,5 @@ $newCard.classList.add("card")
 //$cards.removeChild($cards.lastElementChild)
 
 document.body.appendChild($cloneCards)
+
+
