@@ -1,4 +1,8 @@
-const $boton = document.querySelector(".button"),
+import {$interfazReloj} from "./temporizador_module.js";
+import { shortcuts } from "./teclado.js";
+
+const d = document,
+      $boton = document.querySelector(".button"),
       $menu  = document.getElementById("menu"),
       $padre = document.getElementById("padre-secciones")
 
@@ -17,8 +21,6 @@ const irSeccion = () => {
 $boton.addEventListener("click",alternarMenu)
 
 let seccion = 0
-
-
 
 $menu.addEventListener("click", e => {
     if(e.target.matches("div") || e.target.matches("#menu h3")){
@@ -60,3 +62,28 @@ $menu.addEventListener("click", e => {
         }
     }
 })
+
+//LLamar temportizador despues del h3 "Seccion 1"
+
+const $alarma = $interfazReloj()
+
+const $primerDiv = document.getElementById("div-temp")
+
+$primerDiv.append($alarma)
+
+const tecladoVerificador = (e)=>{
+    shortcuts(e);
+} 
+
+d.addEventListener("click", e => {
+    let verificador;
+    verificador = e.target.matches(".eventos-teclado") || e.target.matches(".eventos-teclado div")
+    console.log(verificador)
+    if(verificador){
+        d.addEventListener("keydown", tecladoVerificador)
+    }else{
+        d.removeEventListener("keydown",tecladoVerificador)
+    }
+})
+
+

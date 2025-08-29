@@ -67,11 +67,28 @@ h1{
 }
 
 #menu {
-    background-color: aliceblue;
+    background-color: rgb(231, 228, 201);
     opacity: 80%;
 }
 
 #menu > div:hover {
-    background-color: rgb(196, 139, 249);
+    background-color: rgb(181, 102, 255);
 }
 
+.eventos-teclado{
+    background-color: black;
+    height: 20rem;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.eventos-teclado div{
+    background-color: rgb(255, 165, 0);
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 7rem;
+    left: 31vw;
+}
