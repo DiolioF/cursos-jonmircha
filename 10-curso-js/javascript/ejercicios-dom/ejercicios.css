@@ -92,3 +92,45 @@ h1{
     top: 7rem;
     left: 31vw;
 }
+
+.cuenta-regresiva{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.arrow img{
+    height: 4rem;
+    width: 4rem;
+}
+
+.arrow{
+    position:fixed;
+    height: 10px;
+    width: 10px;
+}
+
+.hidden{
+    top: 91%;
+    left: 85%;
+}
+
+
+
+.modo{
+    position: fixed;
+    height: 5rem;
+    width: 5rem;
+    top: 90%;
+    left: 1rem;
+    background-color: rgb(211, 252, 252);
+    border-radius: 50%;
+}
+
+.modo:hover{
+    background-color: rgb(123, 159, 159);
+}
+
+.modo img{
+    height: 5rem;
+    width: 5rem;
+}

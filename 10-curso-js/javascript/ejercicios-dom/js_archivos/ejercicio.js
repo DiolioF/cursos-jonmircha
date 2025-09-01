@@ -1,5 +1,10 @@
 import {$interfazReloj} from "./temporizador_module.js";
 import { shortcuts } from "./teclado.js";
+import countdown from "../js_archivos/cuenta_regresiva.js";
+import desplazamientoArriba from "../js_archivos/boton_arriba.js";
+import modo from "../js_archivos/dark_light.js"
+
+
 
 const d = document,
       $boton = document.querySelector(".button"),
@@ -7,6 +12,11 @@ const d = document,
       $padre = document.getElementById("padre-secciones")
 
 
+d.addEventListener("DOMContentLoaded", e => {
+    countdown("countdown","May 26, 2026 00:01:00", "Feliz cumpleaños santi")
+    desplazamientoArriba()
+    modo()
+})
 
     
 const alternarMenu = () => {
