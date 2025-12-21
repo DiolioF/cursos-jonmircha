@@ -1,20 +1,5 @@
 {
-  "name": "primeros-pasos-npm",
-  "version": "1.0.0",
-  "description": "en este proyecto aprendemos npm",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "valentin",
-    "serassio",
-    "<valentinserassio@gmail.com>"
-  ],
-  "author": "valentin serassio <valentinserassio@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "react": "^19.2.3",
-    "responsimple": "^1.0.1"
+  "devDependencies": {
+    "jest": "^30.2.0"
   }
 }
