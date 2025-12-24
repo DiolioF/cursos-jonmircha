@@ -1,0 +1,21 @@
+{
+  "name": "todolist-p1",
+  "version": "1.0.0",
+  "description": "Un TodoList desde la CLI De Node",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Valentin Serassio",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "chalk": "^5.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

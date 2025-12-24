@@ -1,0 +1,13 @@
+{
+  "name": "apirest-pract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "fakeApi" : "json-server -w -p 5555 db.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
